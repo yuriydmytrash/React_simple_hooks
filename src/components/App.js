@@ -4,14 +4,16 @@ import React, { useState } from 'react';
 // class App extends React.Component {
 const App = () => {
   // state = { resourse: 'post' };
+  const [resource, setResourse] = useState('posts');
+
   return (
     <div>
       <div>
-        <button onClick={() => this.setState({ resource: 'posts' })}>Posts</button>
-        <button onClick={() => this.setState({ resource: 'todos' })}>Todos</button>
+        <button onClick={() => setResourse('posts')}>Posts</button>
+        <button onClick={() => setResourse('todos')}>Todos</button>
 
       </div>
-      {this.state.resource}
+      {resource}
     </div >
   );
 
